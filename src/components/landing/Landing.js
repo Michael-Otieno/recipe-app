@@ -1,3 +1,4 @@
+import Search from "../search/Search";
 import "./Landing.css";
 
 function Landing() {
@@ -11,10 +12,7 @@ function Landing() {
         </h2>
         <div className="filter-search">
           <div>FILTER RECIPES</div>
-          <div>
-            <input type="search" />
-            <button>SEARCH</button>
-          </div>
+          <Search/>
         </div>
       </div>
     </div>
