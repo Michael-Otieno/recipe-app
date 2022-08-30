@@ -40,3 +40,19 @@
 .healthy{
   background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url('./img/healthy.jpg');
 }
+.recipes{
+  background-image: url("./img/itemsBackground.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 1rem;
+  margin-top: 1rem;
+
+}
+.recipes h2{
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  text-decoration-line: underline;
+  color: #041420;
+
+}
