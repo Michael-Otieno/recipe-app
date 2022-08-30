@@ -1,0 +1,36 @@
+.search{
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.search img{
+  position: absolute;
+  left: 1.5%;
+  bottom:12%;
+  margin: 0;
+  padding: 0;
+}
+.search input{
+  width: 25.938rem;
+  height: 2.125rem;
+  background: rgba(200, 54, 54, 0.66);
+  outline: none;
+  border: none;
+  padding-block: .3rem;
+  padding-left: 2.4rem;
+  padding-right: .8rem;
+  font-size:1rem;
+  margin: 0;
+}
+.search button{
+  width: 7.241rem;
+  height: 2.125rem;
+  background: rgba(0, 0, 0, 0.4);
+  margin: 0;
+  outline: none;
+  border: none;
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: #FFFFFF;
+
+}
