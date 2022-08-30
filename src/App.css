@@ -1,0 +1,42 @@
+.App{
+  font-family: 'Inter';
+}
+.categories{
+  width: 90%;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  /* gap: .1rem; */
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.category{
+  background-repeat: no-repeat;
+  background-size: cover;
+  width:95%;
+  height:12.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.category p{
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+.all{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url('./img/all.jpg');
+  
+}
+.indian{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url('./img/indian.jpg');
+}
+.vegetarian{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url('./img/vegeterian.jpg');
+}
+.healthy{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url('./img/healthy.jpg');
+}
