@@ -56,3 +56,17 @@
   color: #041420;
 
 }
+ ul{
+  margin: 0;
+  padding: 0;
+  width: 90%;
+}
+.recipeList li{
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  /* grid-auto-rows: 20rem; */
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
