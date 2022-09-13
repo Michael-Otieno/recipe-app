@@ -1,16 +1,16 @@
 import "./Recipe.css";
-import indian from "../../img/indian.jpg";
-import {apiUrl} from '../../options';
+import { Link } from "react-router-dom";
 
-
-function Recipe({name,description,image}) {
+function Recipe({id,name,description,image}) {
   
   return (
     <div className="recipe">
       <img src={image} alt="" />
       <h3>{name}</h3>
-      <p>{description}</p>
-      <button>DETAILS</button>
+      <p>{description.substring(0,100)}{description.length >= 100 && '...'}</p>
+      <Link to={`/recipe/${id}`}>
+        <button>DETAILS</button>
+      </Link>
     </div>
   );
 }
