@@ -1,60 +1,62 @@
-import { useEffect, useState } from "react";
 import "./App.css";
-import Landing from "./components/landing/Landing";
-import Recipe from "./components/recipe/Recipe";
-import options, { apiUrl } from "./options";
+import "./components/landing/Landing.css"
+import "./components/search/Search.css"
+import RecipeDetail from "./components/recipeDetail/RecipeDetail";
+import {Routes, Route} from 'react-router-dom';
+import AllRecipes from "./components/allRecipes/AllRecipes";
+import facebook from './img/facebook.png';
+import instagram from './img/ig.png';
+import mail from './img/mail.png';
+import twitter from './img/twitter.png';
+
+
 
 function App() {
-  const [recipes, setRecipes] = useState([])
 
-  useEffect(()=>{
-    getAllRecipes()  
-  },[])
-
-  const getAllRecipes = async () => {
-    await fetch(`${apiUrl}list?from=0&size=20&tags=under_30_minutes`, options)
-      .then(response => response.json())
-      .then(response => setRecipes(response.results))
-      .catch(err => console.error(err));
-  }
-  
-  const getDetails = async (id) => {
-    console.log('details')
-  }
-
-
-
-  const recipeList = recipes.map((recipe) =>
-    <Recipe
-    key={recipe.id}
-    name={recipe.name}
-    description={recipe.description}
-    image={recipe.thumbnail_url}
-  
-    />
-  )
+ 
   return (
     <div className="App">
-      <Landing />
-      <div className="categories">
-        <div className="category all">
-          <p>all in one</p>
+      <Routes>
+      <Route path='/' element={<AllRecipes />} />
+        <Route path='/recipe/:name' element={<RecipeDetail />} />
+        
+      </Routes> 
+      <div className="footer">
+        <div className="contact-details">
+          <h4>TASTY RECIPES</h4>
+          <p>
+            <span className="contact-header">Phone: </span>
+            <span className="contact">+254723888354/0704702226</span>
+          </p>
+          <p>
+            <span className="contact-header">Email: </span>
+            <span className="contact">otieno.oduor.michael@gmail.com</span>
+          </p>
+          <p>
+            <span className="contact-header">Support: </span>
+            <span className="contact">support@tastyrecipes.com</span>
+          </p>
+          <div className="footer-icons">
+            <span>
+              <img src={facebook} alt='' />
+            </span>
+            <span>
+              <img src={instagram} alt='' />
+            </span>
+            <span>
+              <img src={mail} alt='' />
+            </span>
+            <span>
+              <img src={twitter} alt='' />
+            </span>
+          </div>
         </div>
-        <div className="category indian">
-          <p>indian</p>
+        <div className="about-details">
+          <h4>ABOUT</h4>
+          <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged
+          </p>
         </div>
-        <div className="category vegetarian">
-          <p>vegetarian</p>
-        </div>
-        <div className="category healthy">
-          <p>healthy</p>
-        </div>
-      </div>
-      <div className="recipes">
-        <h2>RECIPES</h2>
-        <ul className="recipeList">
-          <li>{recipeList}</li>
-        </ul>
       </div>
     </div>
   );
