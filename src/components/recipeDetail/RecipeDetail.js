@@ -69,12 +69,12 @@ function RecipeDetail() {
           </div>
           <div className="tags">
             <h5>Tags: </h5>
-            <p>
+            <div>
               {error && { error }}
               {recipeDetail.tags?.map((tag) => (
-                <span key={tag.id}>{tag.display_name}</span>
+                <p key={tag.id}>{tag.display_name}</p>
               ))}
-            </p>
+            </div>
           </div>
         </div>
       </div>
