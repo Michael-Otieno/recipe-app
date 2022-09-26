@@ -7,7 +7,7 @@ function Recipe({id,name,description,image}) {
     <div className="recipe">
       <img src={image} alt="" />
       <h3>{name}</h3>
-      <p>{description.substring(0,100)}{description.length >= 100 && '...'}</p>
+      <p>{description.substring(0,40)}{description.length >= 40 && '...'}</p>
       <Link to={`/recipe/${id}`}>
         <button>DETAILS</button>
       </Link>
@@ -16,3 +16,4 @@ function Recipe({id,name,description,image}) {
 }
 
 export default Recipe;
+
